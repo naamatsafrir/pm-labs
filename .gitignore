@@ -1,1 +1,15 @@
 .prompts/
+
+# Lab outputs + common deps
+docs/Lab4/work/
+*.pptx
+
+# Dependencies
+node_modules/
+
+# Package files
+package.json
+package-lock.json
+
+# ppt-creator output
+output/
