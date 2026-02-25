@@ -1,0 +1,29 @@
+# Support Ticket 466
+
+- Artifact Type: Support Ticket
+- Segment: APAC Enterprise
+- Region: APAC
+- Participants: End User, Workspace Admin, Workspace Admin
+- Source ID: SUPPORT-TICKETS-7466
+
+## Summary
+Several users asked for improved in-app glossary and terminology guidance. Several users asked for improved in-app glossary and terminology guidance.
+
+## Evidence Extracts
+- Need Signal: Offline Access (Traveling PM)
+  - Quote: "Mobile and desktop users need read/write caching for flight-mode use."
+  - Confidence: medium
+
+## Additional Context
+Several users asked for improved in-app glossary and terminology guidance. Several users asked for improved in-app glossary and terminology guidance.
+
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.

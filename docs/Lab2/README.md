@@ -1,24 +1,17 @@
-# Lab 2 — Prompting + Context Management: Write a PRD from an Artifact Dump
+# Lab 2 — Prompting + Context Management: Build a Customer Needs Document
 
-**Goal:** Practice advanced prompting and context management by writing a prompt that generates a high-quality PRD from a large, messy set of PM artifacts.
+**Goal:** Practice structured prompting and context management by synthesizing a deterministic **Customer Needs Document** from a very large artifact corpus.
 
 ## Files
-- [Problem Brief](./ProblemBrief.md)
 - [Lab Guide](./LabGuide.md)
-- [PRD Rubric](./PRD-Rubric.md)
-- [Prompt Template (optional scaffold)](./prompts/prompt-template.md)
+- [Customer Needs Rubric](./CustomerNeeds-Rubric.md)
+- [Customer Needs Reference](./CustomerNeeds-Reference.md)
 - Context artifact dump
   - [Context Index](./context/00-index.md)
-  - [Seed artifacts (high-signal)](./context/seed/)
-  - [Generated artifacts (high-volume)](./context/generated/)
-- [Reference PRD (comparison)](./PRD-Reference.md)
+  - [Seed artifacts](./context/seed/)
+  - [Generated artifacts](./context/generated/)
 
 ## Summary
-You’ll be given a realistic PM “artifact dump” that is intentionally too large to load all at once.
+This lab is intentionally larger than a single context window (1M+ tokens). To succeed, students must write one prompt that tells the agent to process context in batches, save running summaries to local files, and synthesize the final output from those saved notes.
 
-Your job is to write a **multi-step prompt** that instructs an AI coding agent to:
-1. Inventory the context, highlight conflicts/gaps, and propose assumptions.
-2. Produce a complete PRD with clear requirements, non-functional requirements, and acceptance criteria.
-3. Self-check the PRD against a rubric before finalizing.
-
-Then you’ll compare your PRD against the reference PRD.
+The outcome is deterministic: the corpus contains 20 distinct customer needs with known frequency patterns. You are graded on coverage, evidence quality, and synthesis discipline.

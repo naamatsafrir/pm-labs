@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-02-25T22:53:24.759Z",
+  "artifactTypeCounts": {
+    "customer-interviews": 150,
+    "support-tickets": 500,
+    "sales-call-notes": 150,
+    "nps-survey-responses": 400,
+    "feature-requests": 200,
+    "community-forum-posts": 100,
+    "cs-qbr-notes": 80,
+    "churn-exit-interviews": 80,
+    "internal-meeting-notes": 80,
+    "cab-session-transcripts": 40
+  },
+  "totalFiles": 1780,
+  "noiseFiles": 534,
+  "needMentionCounts": {
+    "rbac": 52,
+    "readonly": 48,
+    "audit-trail": 45,
+    "export": 40,
+    "sso-saml": 38,
+    "workspace-segmentation": 36,
+    "notification-control": 34,
+    "api": 32,
+    "custom-fields": 30,
+    "reporting": 28,
+    "approval-workflows": 14,
+    "guest-access": 13,
+    "bulk-operations": 12,
+    "template-library": 11,
+    "mobile": 10,
+    "data-residency": 4,
+    "compliance-certs": 4,
+    "offline": 4,
+    "multilanguage": 4,
+    "rollback": 5
+  },
+  "totalChars": 4653942,
+  "totalWords": 582680,
+  "approxTokens": 1163486
+}

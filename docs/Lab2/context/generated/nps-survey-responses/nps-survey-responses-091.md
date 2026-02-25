@@ -1,0 +1,25 @@
+# NPS Survey Response 091
+
+- Artifact Type: NPS Survey Response
+- Segment: Mid-Market
+- Region: NA
+- Participants: NPS Analyst, Customer Respondent, Customer Respondent
+- Source ID: NPS-SURVEY-RESPONSES-7091
+
+## Summary
+Users want stronger contextual help for first-time configuration steps. Users want stronger contextual help for first-time configuration steps.
+
+## Evidence Extracts
+- Need Signal: Notification Control (Team Lead)
+  - Quote: "Some teams miss critical updates while others receive too much noise."
+  - Confidence: medium
+
+## Additional Context
+Participants requested better import validation messaging for CSV uploads. Several users asked for improved in-app glossary and terminology guidance.
+
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.

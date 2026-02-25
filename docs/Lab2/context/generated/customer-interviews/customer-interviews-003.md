@@ -1,0 +1,105 @@
+# Customer Interview 003
+
+- Artifact Type: Customer Interview
+- Segment: Mid-Market
+- Region: APAC
+- Participants: Program Lead, PMO Director, Program Lead
+- Source ID: CUSTOMER-INTERVIEWS-7003
+
+## Summary
+Several users asked for improved in-app glossary and terminology guidance. Teams want clearer onboarding milestones for new workspace launches.
+
+## Evidence Extracts
+- Need Signal: Data Export (Operations Analyst)
+  - Quote: "Customers need to export roadmap, status, and log data to downstream reporting tools."
+  - Confidence: high
+
+## Additional Context
+Participants requested better import validation messaging for CSV uploads. Teams want clearer onboarding milestones for new workspace launches.
+
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Evidence note: customer language often differs by function, but each artifact should be interpreted in the context of governance, operational scale, and cross-team collaboration constraints.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.
+
+Interpretation guidance: avoid overfitting to single phrases; classify pain by underlying job-to-be-done and control requirements where relevant.
+
+Context detail: account maturity, regional policy requirements, and implementation history influenced how participants framed needs during this conversation.
+
+Analyst memo: this interaction includes both explicit requests and implicit workflow pain; downstream synthesis should normalize terminology while preserving direct quote intent.

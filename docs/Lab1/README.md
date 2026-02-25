@@ -1,17 +1,9 @@
-# Lab 1 — Spec vs. Naive Prompting
+# Lab 1 — Git Fundamentals: Fork, Clone, Change, Push, PR
 
-**Goal:** Compare outcomes between a naive "build something" prompt and a spec-driven prompt using a PRD.
+**Goal:** Learn the standard GitHub flow using the terminal and VS Code — fork a repo, clone it, make a change with GitHub Copilot, and open a pull request.
 
 ## Files
-- [PRD](./PRD.md)
-- Prompts
-  - [Naive prompt](./prompts/naive.md)
-  - [Spec-driven prompt](./prompts/spec.md)
 - [Lab Guide](./LabGuide.md)
 
 ## Summary
-You will generate the same app twice using different prompting strategies:
-1. **Naive prompt** — minimal instructions.
-2. **Spec-driven prompt** — guided by a full PRD.
-
-Then, compare outputs using a checklist and a brief demo/reflection.
+You will fork and clone a repository, create a branch, make a change assisted by GitHub Copilot, and push it back to GitHub as a pull request — all from the command line. A bonus phase introduces VS Code's built-in Source Control view for staging, committing, and viewing diffs.

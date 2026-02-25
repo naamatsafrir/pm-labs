@@ -1,61 +1,59 @@
-# Lab 2 Guide — Prompting + Context Management: Write a PRD
+# Lab 2 Guide — Prompting + Context Management: Customer Needs Synthesis
 
 ## Objectives
-- ✅ Practice multi-step prompting to drive a structured deliverable (PRD).
-- ✅ Practice context management: selecting, summarizing, and citing evidence from large artifact sets.
-- ✅ Produce a PRD with testable acceptance criteria and explicit tradeoffs.
+- ✅ Write one structured prompt from scratch.
+- ✅ Manage extreme context volume with chunking and local saved notes.
+- ✅ Produce an evidence-backed **Customer Needs Document** with deterministic quality checks.
 
 ## Prerequisites
-- Any AI coding agent tool you use (Copilot in VS Code/JetBrains, Copilot CLI, Cline, etc.).
-- Ability to attach or paste files into your agent.
+- Any AI coding agent tool you use.
+- Ability to work with local files in your editor/workspace.
 
 ## Setup (5 min)
-1. Open the Lab 2 entrypoint: `docs/Lab2/README.md`.
-2. Read the problem brief: `docs/Lab2/ProblemBrief.md`.
-3. Open the context index: `docs/Lab2/context/00-index.md`.
-4. Skim the seed artifacts in `docs/Lab2/context/seed/`.
+1. Open [README](./README.md).
+2. Open [Context Index](./context/00-index.md).
+3. Skim all files in [context/seed](./context/seed/).
+4. Review expected output shape in [CustomerNeeds-Rubric](./CustomerNeeds-Rubric.md).
 
-## Exercise A — Write your prompt (20–30 min)
-Write a prompt that will generate a PRD from the artifacts.
+## What you are building
+Create a **Customer Needs Document** that identifies and ranks customer pain points from one year of artifacts.
 
-Constraints:
-- You must write the prompt **from scratch**.
-- Your prompt must explicitly address **context volume** (it should instruct the agent how to inventory and use what it’s given).
+The task is intentionally too large for a single context window. If you do not process all artifact batches and preserve notes across steps, your output will miss critical needs.
 
-Your prompt must instruct the agent to do **all** of the following:
-1. **Inventory**: list the files it received + brief summary of each.
-2. **Conflict & gaps**: identify contradictions, missing details, and what assumptions it will make.
-3. **Questions**: ask clarifying questions (limit to ~8), but continue with explicit assumptions.
-4. **PRD output**: produce a complete PRD with roles/permissions, audit log requirements, NFRs, metrics, and testable AC.
-5. **Self-check**: validate the PRD against `docs/Lab2/PRD-Rubric.md` and revise.
-6. **Evidence discipline**: cite artifact filenames for key decisions.
+## Hard constraints
+- Use **one prompt only** (single submission).
+- Write the prompt **from scratch** (no scaffold/template).
+- The prompt must instruct the agent to:
+   1. Process artifacts in explicit batches (by folder/type/range).
+   2. After each batch, write/update summary notes in a local file.
+   3. Keep a running deduplicated list of discovered needs with evidence.
+   4. After all batches are processed, synthesize the final document from the saved notes.
+   5. Include filename evidence for each final need.
 
-> Tip: Don’t attach everything. Select a reasonable subset of artifacts and make the agent explain its evidence.
+## Required final document format
+Your output must include:
+1. Ranked customer needs list (distinct, deduplicated).
+2. Frequency bucket or estimate for each need.
+3. Representative evidence snippets.
+4. Affected customer segments.
+5. Business impact if unresolved.
 
-## Exercise B — Run the prompt (20–30 min)
-1. Choose a set of artifacts to attach:
-   - Start with 4–8 seed artifacts from `seed/`.
-   - Add 10–30 generated artifacts from `generated/` that represent customer and sales patterns.
-2. Run your prompt.
-3. If the agent asks clarifying questions, answer only what you reasonably know. If you don’t know, tell it to proceed with assumptions.
-4. Capture the PRD output (save it in your own notes or a new file).
+Do **not** produce a PRD or implementation design.
 
-## Compare (10–15 min)
-Compare your PRD to the reference PRD: `docs/Lab2/PRD-Reference.md`.
+## Suggested workflow inside your single prompt
+1. Read all `seed/` files first.
+2. Enumerate all artifact type folders in `generated/`.
+3. Process each folder in numbered chunks.
+4. Save notes to disk after every chunk.
+5. Re-read the saved notes at the end and generate the final document.
 
-Use the rubric as a checklist.
+## Evaluation
+Use [CustomerNeeds-Rubric](./CustomerNeeds-Rubric.md) to self-check your result.
 
-| Rubric Area | Your PRD Notes | Reference Notes |
-| --- | --- | --- |
-| Problem clarity | | |
-| Scope discipline | | |
-| Requirements quality | | |
-| Non-functional requirements | | |
-| Acceptance criteria | | |
-| Metrics & rollout | | |
+For comparison only, review [CustomerNeeds-Reference](./CustomerNeeds-Reference.md) after you finish.
 
 ## Deliverables
-- Your final prompt (text).
-- Your generated PRD.
-- 5–10 bullets: what context you used, what you ignored, and why.
-- 3 improvements you would make if you had more time.
+- Your final single prompt.
+- Your generated Customer Needs Document.
+- Notes files produced during processing.
+- 5–10 reflection bullets: what failed initially, what changed, and why.
