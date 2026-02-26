@@ -1,119 +1,134 @@
-# Lab 2 Prompt — Customer Needs Document Synthesis
+# Lab 2 Solution Prompt: Customer Needs Document Synthesis
 
-You are a senior product analyst. Your task is to produce a **Customer Needs Document** for the Worklane B2B product planning platform by systematically processing a large corpus of customer feedback artifacts. The corpus is too large for a single context window, so you must follow a strict chunked-processing workflow.
+You are a Product Manager analyzing one year of customer artifacts to create a comprehensive Customer Needs Document. This corpus is intentionally larger than a single context window (1M+ tokens), so you MUST process it in batches and maintain persistent notes.
 
-## Background
+## Your Task
 
-Worklane is a B2B product planning platform used by multi-team organizations for roadmap planning, intake management, and portfolio visibility. Customers span enterprise PMO, business unit program managers, IT/identity teams, and executive sponsors. Internal stakeholders include Product Management, Customer Success, Sales, Support, and Security & Compliance.
+Synthesize a ranked, evidence-backed Customer Needs Document from all artifacts in `docs/Lab2/context/`.
 
-Feedback was gathered over the last 12 months from interviews, support tickets, sales calls, NPS responses, community posts, QBRs, churn exits, feature requests, internal meetings, and CAB sessions.
+## Processing Instructions
 
-## Your deliverable
+### Phase 1: Initialize
+1. Create a working directory for notes: `docs/Lab2/working-notes/`
+2. Create an empty file: `docs/Lab2/working-notes/running-needs.md` with structure:
+   ```
+   # Running Customer Needs Discovery
+   
+   ## Discovered Needs
+   [Will be populated as we process batches]
+   
+   ## Processing Log
+   [Track which batches have been processed]
+   ```
 
-Produce a single **Customer Needs Document** that contains:
-1. A ranked list of **distinct, deduplicated** customer needs (pain points / unmet needs only — no solutions or implementation design).
-2. A **frequency bucket** for each need: `High` (appears across many artifact types and high volume), `Medium` (appears in several types or moderate volume), or `Rare` (appears in narrow file ranges or few artifact types).
-3. **1–2 representative evidence excerpts** per need, with the **source filename** cited.
-4. **Affected customer segments** per need (e.g., Enterprise PMO, IT Teams, Executive Sponsors, etc.).
-5. **Business impact if unresolved** — what happens to Worklane if this need stays unaddressed.
+### Phase 2: Process Seed Artifacts
+1. Read ALL files in `docs/Lab2/context/seed/`
+2. Extract customer pain points, requests, and needs
+3. Write your findings to `docs/Lab2/working-notes/batch-01-seed.md` with:
+   - List of needs discovered
+   - Evidence (file names and relevant quotes)
+   - Initial frequency estimates
+4. Update `running-needs.md` with deduplicated needs
 
-Do **NOT** produce a PRD, implementation design, or technical architecture.
+### Phase 3: Process Generated Artifacts in Batches
+1. Read `docs/Lab2/context/00-index.md` to understand the structure
+2. Process each artifact type folder in `generated/` separately:
+   - **Batch 02**: Customer interviews (all interview files)
+   - **Batch 03**: Support tickets (all ticket files)
+   - **Batch 04**: Sales call notes (all sales files)
+   - **Batch 05**: Product feedback (all feedback files)
+   - **Batch 06**: User research (all research files)
+   - **Batch 07**: Bug reports (all bug files)
+   - **Batch 08**: Feature requests (all feature request files)
 
-## Strict processing workflow (you MUST follow every step)
+3. For EACH batch:
+   - Read all files in that artifact type
+   - Create `docs/Lab2/working-notes/batch-[##]-[type].md`
+   - Extract customer needs with evidence
+   - Update `running-needs.md` by:
+     * Adding new needs
+     * Incrementing frequency counts for existing needs
+     * Adding new evidence sources
+     * Deduplicating similar needs
 
-### Step 0 — Read seed files
-Read all files in `docs/Lab2/context/seed/` to understand the company, product, methodology, stakeholders, and deliverable format:
-- `01-company-background.md`
-- `02-product-overview.md`
-- `03-research-methodology.md`
-- `04-team-org-chart.md`
-- `05-deliverable-format.md`
-
-### Step 1 — Enumerate all artifact folders
-List all subdirectories inside `docs/Lab2/context/generated/`. The expected folders and file counts are:
-| Folder | Expected files |
-|---|---|
-| `customer-interviews/` | ~150 |
-| `support-tickets/` | ~500 |
-| `sales-call-notes/` | ~150 |
-| `nps-survey-responses/` | ~400 |
-| `feature-requests/` | ~200 |
-| `community-forum-posts/` | ~100 |
-| `cs-qbr-notes/` | ~80 |
-| `churn-exit-interviews/` | ~80 |
-| `internal-meeting-notes/` | ~80 |
-| `cab-session-transcripts/` | ~40 |
-
-Confirm all 10 folders exist and list the actual file names in each.
-
-### Step 2 — Process each folder in chunks
-For **each** folder listed above, process the files in sequential chunks of **20–30 files at a time**. For each chunk:
-
-1. **Read** every file in the chunk.
-2. **Extract** every customer pain point, complaint, unmet need, or friction signal mentioned. Record:
-   - The need (short label)
-   - A verbatim or near-verbatim supporting quote
-   - The source filename
-   - Which customer segment expressed it
-3. **After finishing each chunk**, write/update a local notes file called `lab2-processing-notes.md` with:
-   - Which folder and file range you just processed (e.g., `support-tickets/st-001.md` through `support-tickets/st-030.md`)
-   - New needs discovered in this chunk
-   - Updated tally counts for previously seen needs
-   - Any new evidence snippets worth preserving
-4. **Do NOT skip any files or any folders.** Every file in every folder must be read.
-5. **Do NOT synthesize the final document until ALL folders and ALL chunks are complete.
-
-### Step 3 — Deduplicate and normalize
-After processing all chunks across all 10 folders:
-
-1. Re-read your `lab2-processing-notes.md` in full.
-2. Merge needs that are semantically equivalent but worded differently (e.g., "need RBAC" and "role permissions are too coarse" → single need about granular role-based access control).
-3. Assign each merged need a frequency bucket (`High` / `Medium` / `Rare`) based on how many artifact types and files mentioned it.
-4. Rank needs from highest to lowest frequency/impact.
-
-### Step 4 — Write the final Customer Needs Document
-Save the final output to `lab2-customer-needs.md` with this structure:
+### Phase 4: Synthesize Final Document
+1. Re-read `docs/Lab2/working-notes/running-needs.md`
+2. Re-read all batch notes files
+3. Create `docs/Lab2/CustomerNeeds-Output.md` with the following structure:
 
 ```markdown
-# Customer Needs Document — Worklane
+# Customer Needs Document
+[Product Name] — [Date Range]
 
-## Summary
-[2–3 sentence overview of the analysis: how many artifacts processed, how many distinct needs identified, top themes.]
+## Executive Summary
+[2-3 paragraphs: key themes, most critical needs, business implications]
 
 ## Ranked Customer Needs
 
-### 1. [Need Title]
-- **Frequency:** High | Medium | Rare
-- **Affected Segments:** [list]
-- **Evidence:**
-  - "[quote]" — `filename.md`
-  - "[quote]" — `filename.md`
-- **Business Impact if Unresolved:** [1–2 sentences]
+### Priority 1: Critical Needs (High Frequency, High Impact)
 
-### 2. [Need Title]
-...
+#### Need #1: [Clear, specific need statement]
+- **Frequency**: [High/Medium/Low] ([X mentions across Y artifact types])
+- **Affected Segments**: [Enterprise/SMB/Individual users/specific roles]
+- **Business Impact**: [What happens if unresolved]
+- **Evidence**:
+  - `[filename]`: "[Representative quote or summary]"
+  - `[filename]`: "[Representative quote or summary]"
+  - [Include 3-5 pieces of evidence from different artifact types]
 
-[Continue for all identified needs]
+[Repeat for each Priority 1 need]
 
-## Methodology Notes
-- Total artifacts processed: [count]
-- Artifact types covered: [list all 10]
-- Processing approach: chunked batch processing with running notes
+### Priority 2: Important Needs (Medium Frequency/Impact)
+
+[Same structure as Priority 1]
+
+### Priority 3: Emerging Needs (Lower Frequency, but Notable)
+
+[Same structure as Priority 1]
+
+## Customer Segment Analysis
+[Summary of which segments experience which needs]
+
+## Appendix: Processing Methodology
+- Total artifacts processed: [X]
+- Artifact types analyzed: [List]
+- Date range: [Range]
+- Processing approach: [Brief description of batching strategy]
 ```
 
-### Step 5 — Self-check against rubric
-After writing the document, evaluate it against these criteria and note any gaps:
-1. **Coverage** — Did you capture both high-frequency AND rare needs? Rare needs may appear only in 1-2 artifact types.
-2. **Frequency accuracy** — Are your High/Medium/Rare buckets directionally correct based on actual occurrence counts?
-3. **Evidence discipline** — Does every need have file-specific evidence from multiple artifact types where relevant?
-4. **Segment clarity** — Have you distinguished enterprise governance needs from convenience asks?
-5. **No solution creep** — Is the document focused purely on customer pain, not implementation ideas?
+## Critical Requirements
 
-If any gaps are found, revise the document before finalizing.
+✅ **Process ALL batches** — Do not synthesize until you've processed every artifact folder
+✅ **Save notes after EACH batch** — Write/update files persistently
+✅ **Deduplicate needs** — Merge equivalent pain points (e.g., "slow performance" = "system latency")
+✅ **Track evidence sources** — Include specific filenames for each need
+✅ **Rank by frequency AND impact** — Not just occurrence count
+✅ **Focus on PAIN, not solutions** — Describe what customers struggle with, not what to build
+✅ **Cross-reference artifact types** — Note when a need appears in interviews AND tickets AND sales calls
+✅ **Identify ALL 20 distinct needs** — The corpus contains exactly 20 themes (per reference doc)
 
-## Critical reminders
-- **Process EVERY file.** Do not sample or skip ranges. Rare needs hide in narrow ranges.
-- **Save notes after EVERY chunk.** If you lose context, you lose needs.
-- **Deduplicate carefully.** Different stakeholders describe the same need in different language.
-- **Do not synthesize early.** Premature synthesis from partial data will miss critical needs.
-- **Expect ~20 distinct needs** after deduplication — some high frequency, some rare.
+## Deduplication Rules
+- "Performance issues" = "Slow loading times" = "System latency"
+- "Cannot find X" = "Search doesn't work for X" = "Discoverability problems"
+- "Manual process is tedious" = "Too many clicks" = "Workflow inefficiency"
+- Keep the most precise phrasing and merge evidence
+
+## Output Quality Checklist
+Before finalizing, verify:
+- [ ] All batch notes files exist (01-08+)
+- [ ] running-needs.md is comprehensive
+- [ ] Final document has 15-20 distinct needs
+- [ ] Each need has 3+ evidence sources
+- [ ] Each need has segment + impact analysis
+- [ ] Frequency ranking makes logical sense
+- [ ] No needs are solution-focused (no "add dark mode" — instead "eye strain from bright UI")
+
+## Do NOT:
+❌ Skip batches or folders
+❌ Synthesize from partial context
+❌ Write solution designs or PRDs
+❌ Lose evidence attribution
+❌ Process everything in one pass without saving notes
+
+## Start Processing Now
+Begin with Phase 1 initialization, then proceed through all phases systematically.
