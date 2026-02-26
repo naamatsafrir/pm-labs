@@ -1,4 +1,4 @@
-# pm-labs
+# Product manager course - Labs
 
 Labs for an AI coding agents course for PMs.
 
