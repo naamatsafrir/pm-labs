@@ -15,7 +15,7 @@ Interactive labs for PMs to learn AI coding agents (prompting, context, custom a
 
 Lab 2 focuses on advanced prompting and context management: students write a prompt that generates a high-quality PRD from a large, messy set of PM artifacts.
 
-Lab 4 focuses on tool extension, skill building, and multi-agent orchestration: students build their own web-search skill, use Work IQ for internal context, and generate a professional slide deck via the ppt-creator skill.
+Lab 4 focuses on tool extension, skill building, and multi-agent orchestration: students build their own web-search skill, use Work IQ for internal context, and generate a professional slide deck or programmatic video via the ppt-creator, pptx, and remotion skills.
 
 ## Structure
 
