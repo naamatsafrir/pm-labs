@@ -85,16 +85,17 @@ Use the **make-skill-template** skill (already installed at `.github/skills/make
 
 > **Why summarize instead of caching full pages?** Full web pages are enormous. If you dump 3 entire pages into the context window, you'll push out earlier context and the agent will "forget" its instructions or prior results. Summaries keep STM lean.
 
-### 4) Deck build skills (ppt-creator + pptx)
+### 4) Output build skills (ppt-creator + pptx + remotion)
 
-This lab includes **two** deck-building skills — your agent can use one or both:
+This lab includes **three** output-building skills — your agent can use one or more:
 
 | Skill | Location | What it does |
 | --- | --- | --- |
 | **ppt-creator** | `.github/skills/ppt-creator/` | Community skill from [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills). Transforms structured content into a slide deck using the Pyramid Principle, assertion-evidence headings, and a built-in quality rubric. |
 | **pptx** | `.github/skills/pptx/` | Community skill from [Anthropic's agentskills.so](https://agentskills.so/agent-skills/document-file-processing/pptx-presentation-handler-agent-skill?utm_source=chatgpt.com). Handles reading, creating, and editing `.pptx` files directly using PptxGenJS (Node) or python-pptx (Python). |
+| **remotion** | `.github/skills/remotion/` | Programmatic video creation using React. Renders an animated MP4/WebM/GIF of the competitive brief — useful when you want a video deliverable instead of (or in addition to) a slide deck. Requires Node.js 18+ and FFmpeg. |
 
-You do **not** need to manually install or modify either skill. Your agent instructions should tell the Deck Builder subagent which skill(s) to use.
+You do **not** need to manually install or modify any skill. Your agent instructions should tell the Deck Builder subagent which skill(s) to use.
 
 > **Tip — Install required packages explicitly.** These skills depend on external packages (e.g. `pptxgenjs`, `python-pptx`, `markitdown`). In your agent instructions, **explicitly tell the agent to install any Python or Node packages required by the skills before using them.** For example, add a line like:
 >
@@ -158,11 +159,12 @@ Run collection in parallel:
 - Treat Work IQ output as **internal context**; do not present it as public fact.
 - Write Work IQ findings to a separate file: `docs/Lab4/work/internal-context.md`.
 
-### 5) Deck output via ppt-creator and/or pptx skill
+### 5) Output via ppt-creator, pptx, and/or remotion skill
 
-- The Deck Builder subagent should use the **ppt-creator** skill, the **pptx** skill, or both.
+- The Deck Builder subagent should use the **ppt-creator** skill, the **pptx** skill, the **remotion** skill, or any combination.
 - Feed it the competitive brief as input.
-- Output goes to `docs/Lab4/work/output/` (the skill's default output directory).
+- Slide deck output goes to `docs/Lab4/work/output/` (the slide skill's default output directory).
+- Video output (if using the remotion skill) goes to `docs/Lab4/work/video/output/`.
 - **Remind the agent to install any required packages** before the skill runs (see the tip in Section 4 above).
 
 ### Minimal agent profile sample (keep yours short)
@@ -191,6 +193,8 @@ Subagents:
    Add skepticNotes where evidence is thin.
 4) Deck Builder: use the ppt-creator and/or pptx skill to build the final slide deck
    from the competitive brief. Output to docs/Lab4/work/output/.
+   Optionally, use the remotion skill to render an animated video version to
+   docs/Lab4/work/video/output/.
    Before running any skill, install its required packages.
 ```
 
@@ -233,6 +237,7 @@ If something is weak:
 - `docs/Lab4/work/internal-context.md` — Work IQ findings
 - `docs/Lab4/work/competitive-brief.md` — final brief
 - `docs/Lab4/work/output/` — slide deck artifacts from ppt-creator
+- `docs/Lab4/work/video/output/` — (optional) animated video from the remotion skill
 
 Reflection (5 bullets):
 

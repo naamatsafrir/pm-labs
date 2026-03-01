@@ -21,6 +21,7 @@ A "Competitive Intelligence Collector" custom agent that:
 - Skills (Agent Skills under `.github/skills/`):
   - [ppt-creator](../../.github/skills/ppt-creator/SKILL.md) — community deck builder (pre-installed)
   - [make-skill-template](../../.github/skills/make-skill-template/SKILL.md) — meta-skill for scaffolding new skills (pre-installed)
+  - [remotion](../../.github/skills/remotion/SKILL.md) — programmatic video creation with React (pre-installed)
   - `web-search` — **you build this** during the lab
 
 ## Outputs (what you should end with)
